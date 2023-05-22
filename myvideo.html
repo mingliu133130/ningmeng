@@ -8,12 +8,20 @@
     .el-page-header__content{
       color: white;
     }
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    #elhead *{
+      margin: 0;
+      padding: 0;
+    }
   </style>
 </head>
 <body>
 <div id="app">
-  <el-page-header style="background-color: #0096dc;
-  color: white;line-height: 60px"
+  <el-page-header id="elhead"  style="background-color: #0096dc;  height: 120px ;
+  color: white;line-height: 120px"
                   @back="goBack" content="">
   </el-page-header>
   <!--上传组件开始-->

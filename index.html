@@ -21,19 +21,19 @@
 
 
         <el-header id="elhead"  style="margin: 0;padding: 0">
-            <div style="margin: 0;padding: 0 ; background-color: #0096dc; height: 60px ; color: white ; line-height: 60px ;text-align: center;font-size: 30px;font-weight: bold">
+            <div style="margin: 0;padding: 0 ; background-color: #0096dc; height: 120px ; color: white ; line-height: 120px ;text-align: center;font-size: 30px;font-weight: bold">
             柠檬的快乐时光
             </div>
 
         </el-header>
 
-        <el-main style="width:100%;margin: 0 auto; margin-top: 0px">
+        <el-main style="width:100%;margin: 0 auto; margin-top: 60px">
 
             <el-row gutter="20">
                 <el-col span="8" v-for="p in productArr">
                     <el-card>
                       <a :href="'./myvideo.html?videourl='+p.video">
-                        <img :src="p.url" width="100%" height="150px">
+                        <img :src="p.url" width="100%" height="300px">
                       </a>
                     </el-card>
                 </el-col>
