@@ -20,10 +20,27 @@
 </head>
 <body>
 <div id="app">
-  <el-page-header id="elhead"  style="background-color: #0096dc;  height: 120px ;
-  color: white;line-height: 120px"
-                  @back="goBack" content="">
-  </el-page-header>
+<!--  <el-page-header id="elhead"  style="background-color: #0096dc;  height: 120px ;-->
+<!--  color: white;line-height: 120px"-->
+<!--                  @back="goBack" content="">-->
+<!--  </el-page-header>-->
+
+
+
+  <el-header id="elhead"  style="margin: 0;padding: 0 ;height: 120px"  @back="goBack" content="">
+    <div style="margin: 0;padding: 0 ; background-color: #0096dc; height: 120px ; color: white ; line-height: 120px ;text-align: center;font-size: 30px;font-weight: bold">
+
+        <el-page-header id="elhead"  style="background-color: #0096dc;  height: 120px ;
+        color: white;line-height: 120px"
+                        @back="goBack" content="">
+        </el-page-header>
+
+
+    </div>
+
+  </el-header>
+
+
   <!--上传组件开始-->
 
   <video poster=""
