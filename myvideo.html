@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.15.9/theme-chalk/index.css">
+  <style>
+    .el-page-header__content{
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <el-page-header style="background-color: #0096dc;
+  color: white;line-height: 60px"
+                  @back="goBack" content="">
+  </el-page-header>
+  <!--上传组件开始-->
+
+  <video poster=""
+         loop muted autoplay controls
+         style=" width: 100%; height: 100%;">
+    <!--source设置播放资源 src设置资源路径 type播放类型-->
+    <source :src="'imgs/'+dialogImageUrl"
+            type="audio/mp4">
+    您的浏览器不支持播放此视频.
+  </video>
+
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://cdn.staticfile.org/vue/2.6.14/vue.min.js"></script>
+<!-- import JavaScript -->
+<script src="https://cdn.staticfile.org/element-ui/2.15.9/index.min.js"></script>
+<script>
+  let v = new Vue({
+    el: '#app',
+    data: function() {
+      return {
+        dialogImageUrl: '',
+        dialogVisible: false
+      }
+    },
+    created:function (){
+      let avideourl = location.search.split("=")[1];
+      this.dialogImageUrl = avideourl;
+    },
+    methods:{
+      goBack() {
+        console.log('go back');
+        //返回上一页面
+        history.back();
+      },
+      handleRemove(file, fileList) {
+        console.log(file, fileList);
+      },
+      handlePictureCardPreview(file) {
+        this.dialogImageUrl = file.url;
+        this.dialogVisible = true;
+      }
+    }
+  })
+</script>
+</html>
